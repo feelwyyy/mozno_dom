@@ -536,7 +536,7 @@ function buildBottomSections() {
 
     '<footer><div class="w" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">',
     '<div><strong style="color:#fff;letter-spacing:.12em">МОЖНО ДОМ</strong><p style="margin-top:4px">Коллекция проектов «Гордость» • КП «Южный-3» (17 км от Краснодара)</p></div>',
-    '<div style="display:flex;gap:10px"><a href="files/gordost-planirovki.pdf" download class="btn btn-l btn-sm">Скачать планировки</a><a href="https://max.ru" target="_blank" rel="noopener" class="btn btn-p btn-sm">Канал в MAX</a></div>',
+    '<div style="display:flex;gap:10px"><a href="https://max.ru" target="_blank" rel="noopener" class="btn btn-p btn-sm">Канал в MAX</a></div>',
     '</div></footer>',
 
     '<div class="mbg" id="modal" onclick="if(event.target===this)closeM()"><div class="mbx" id="mbox"></div></div>'
