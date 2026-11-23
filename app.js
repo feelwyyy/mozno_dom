@@ -247,13 +247,22 @@ function buildHeaderAndHero() {
     '<div><strong style="display:block;font-size:14px;letter-spacing:.14em">МОЖНО ДОМ</strong><span style="font-size:11px;color:var(--mut)">КП «Южный-3» • 17 км от Краснодара</span></div>',
     '</a>',
     '<nav class="nav" style="align-items:center">',
-    '<a href="https://max.ru" target="_blank" rel="noopener" style="padding:7px 14px;border:1px solid var(--bd);background:var(--sf);color:var(--ink)">MAX</a>',
-    '<a href="https://instagram.com" target="_blank" rel="noopener" style="padding:7px 14px;border:1px solid var(--bd);background:var(--sf);color:var(--ink)">Instagram</a>',
     '</nav>',
     '<div style="display:flex;align-items:center;gap:16px">',
     '<a href="tel:+79111798775" style="font-size:14px;font-weight:700;white-space:nowrap">+7 (911) 179-87-75</a>',
-    '<a href="https://max.ru" target="_blank" rel="noopener" class="btn btn-d btn-sm">Подробнее</a>',
+
+    '<div style="position:relative;display:inline-block">',
+    '<button type="button" onclick="var m=this.nextElementSibling;m.style.display=m.style.display===\'flex\'?\'none\':\'flex\';event.stopPropagation()" class="btn btn-d btn-sm">наши соц сети &#9662;</button>',
+    '<div onclick="event.stopPropagation()" style="display:none;position:absolute;top:calc(100% + 8px);right:0;min-width:200px;background:var(--sf);border:1px solid var(--bd);box-shadow:0 12px 30px rgba(0,0,0,.15);padding:6px;z-index:50;flex-direction:column;gap:2px">',
+    '<a href="https://max.ru/channel_mognodom" target="_blank" rel="noopener" style="padding:9px 12px;font-size:13px;font-weight:700;color:var(--acc);display:block">Канал в MAX</a>',
+    '<a href="https://t.me/legkayaipoteka" target="_blank" rel="noopener" style="padding:9px 12px;font-size:13px;font-weight:600;color:var(--ink);display:block">Telegram</a>',
+    '<a href="https://vk.ru/mdkrasnodar" target="_blank" rel="noopener" style="padding:9px 12px;font-size:13px;font-weight:600;color:var(--ink);display:block">ВКонтакте</a>',
+    '<a href="https://www.instagram.com/mariyam230488?gwpx=NnlkM2Rqb3JvZHZl&utm_source=qr" target="_blank" rel="noopener" style="padding:9px 12px;font-size:13px;font-weight:600;color:var(--ink);display:block">Instagram</a>',
     '</div>',
+    '</div>',
+
+    
+
     '</div></header>',
 
     '<section class="hero"><div class="w hg">',
@@ -270,10 +279,8 @@ function buildHeaderAndHero() {
     '</div></div>',
     '<div class="hcard">',
     '<img src="hero.jpg" alt="Дом коллекции Гордость">',
-    '<div style="padding:14px 4px 4px">',
-    '<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="kick" style="margin:0">Степень готовности</span><span style="background:var(--alt);padding:2px 8px;font-size:11px;font-weight:700">ИЖС • Эскроу</span></div>',
+    '<div style="padding:14px 4px 4px">',    
     '<p style="font-weight:700;font-size:15px;margin-bottom:12px">ЧО (черновая) • ПЧО (предчистовая) • С ремонтом</p>',
-    '<a href="files/gordost-planirovki.pdf" download class="btn btn-d btn-f btn-sm">Скачать папку с планировками</a>',
     '</div></div></div></section>'
   ].join('');
 }
@@ -536,7 +543,7 @@ function buildBottomSections() {
 
     '<footer><div class="w" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">',
     '<div><strong style="color:#fff;letter-spacing:.12em">МОЖНО ДОМ</strong><p style="margin-top:4px">Коллекция проектов «Гордость» • КП «Южный-3» (17 км от Краснодара)</p></div>',
-    '<div style="display:flex;gap:10px"><a href="https://max.ru" target="_blank" rel="noopener" class="btn btn-p btn-sm">Канал в MAX</a></div>',
+    '<div style="display:flex;gap:10px"><a href="files/gordost-planirovki.pdf" download class="btn btn-l btn-sm">Скачать планировки</a><a href="https://max.ru/channel_mognodom" target="_blank" rel="noopener" class="btn btn-p btn-sm">Канал в MAX</a></div>',
     '</div></footer>',
 
     '<div class="mbg" id="modal" onclick="if(event.target===this)closeM()"><div class="mbx" id="mbox"></div></div>'
@@ -588,7 +595,7 @@ function buildOfferSection() {
     '</div>',
     '<div style="display:flex;gap:10px;flex-wrap:wrap">',
     '<a href="tel:+79111798775" class="btn btn-p btn-sm">Позвонить</a>',
-    '<a href="https://max.ru" target="_blank" rel="noopener" class="btn btn-l btn-sm">Написать в MAX</a>',
+    '<a href="https://max.ru/channel_mognodom" target="_blank" rel="noopener" class="btn btn-l btn-sm">Написать в MAX</a>',
     '</div></div>',
     '</div></section>'
   ].join('');
@@ -618,8 +625,8 @@ window.openM = function(t, p, l) {
     '<p style="font-size:14px;color:var(--mut);margin-bottom:16px">Выберите удобный способ связи — ответим на вопросы, отправим геоточку и согласуем просмотр.</p>',
     details ? '<div style="background:var(--bg);border:1px solid var(--bd);padding:12px;font-size:13px;font-weight:700;color:var(--acc);margin-bottom:16px">' + details + '</div>' : '',
     '<div style="display:flex;flex-direction:column;gap:10px">',
-    '<a href="https://max.ru" target="_blank" rel="noopener" class="btn btn-p btn-f">Написать в MAX</a>',
-    '<a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-d btn-f">Перейти в Instagram</a>',
+    '<a href="https://max.ru/channel_mognodom" target="_blank" rel="noopener" class="btn btn-p btn-f">Написать в MAX</a>',
+    '<a href="https://www.instagram.com/mariyam230488?gwpx=NnlkM2Rqb3JvZHZl&utm_source=qr" target="_blank" rel="noopener" class="btn btn-d btn-f">Перейти в Instagram</a>',
     '<a href="tel:+79111798775" class="btn btn-o btn-f">Позвонить: +7 (911) 179-87-75</a>',
     '</div></div>'
   ].join('');
@@ -636,13 +643,11 @@ window.openProject = function(name) {
     '<button onclick="closeM()" style="position:absolute;top:12px;right:14px;z-index:2;width:34px;height:34px;background:rgba(255,255,255,.92);border:1px solid var(--bd);font-size:22px;cursor:pointer;line-height:1">&times;</button>',
     '<img src="' + d.img + '" alt="Проект ' + p.name + '" style="width:100%;max-height:290px;object-fit:cover;display:block;border-bottom:1px solid var(--bd)">',
     '<div style="padding:24px 28px">',
-    '<p style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px">Цена с черновой отделкой — от <strong>' + p.cho + '</strong></p>',
+    '<p style="font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px">Цена с черновой отделкой — от <strong> ' + p.cho + '</strong></p>(участок входит в стоимость)',
     '<h3 style="font-size:26px;margin-bottom:16px">Проект «' + p.name + '»</h3>',
     '<div style="margin-bottom:14px"><strong style="font-size:13px;color:var(--ink)">Характеристики дома</strong>' + ul(d.specs) + '</div>',
     '<div style="margin-bottom:14px"><strong style="font-size:13px;color:var(--ink)">Конструкция и материалы</strong>' + ul(d.construct) + '</div>',
     '<div style="margin-bottom:14px"><strong style="font-size:13px;color:var(--ink)">Особенности и планировочные решения</strong>' + ul(d.extras) + '</div>',
-    '<div style="margin-bottom:16px"><strong style="font-size:13px;color:var(--ink)">Рекомендуемый участок</strong>',
-    '<ul style="font-size:13px;color:var(--mut);padding-left:18px;line-height:1.65;margin-top:4px"><li>Участок ИЖС в КП «Южный-3»: от 4 до 4,91 сотки</li><li>Фасад (ширина): от 15 м • Глубина: от 30 м</li></ul></div>',
     '<div style="background:var(--bg);border:1px solid var(--bd);padding:12px 14px;font-size:13px;line-height:1.7;margin-bottom:18px">',
     '<div>Цена с черновой отделкой — <strong>' + p.cho + '</strong></div>',
     '<div>Цена с предчистовой отделкой — <strong>' + p.pcho + '</strong></div>',
@@ -729,7 +734,7 @@ draw();
     '</div>',
     '<div style="display:flex;gap:6px;margin-bottom:10px">',
     '<button type="button" class="btn btn-o btn-sm" style="flex:1;padding:6px;font-size:10px" onclick="setRate(6)">Семейная 6%</button>',
-    '<button type="button" class="btn btn-o btn-sm" style="flex:1;padding:6px;font-size:10px" onclick="setRate(3)">Сельская 3%</button>',
+    '<button type="button" class="btn btn-o btn-sm" style="flex:1;padding:6px;font-size:10px" onclick="setRate(6)">IT 6%</button>',
     '<button type="button" class="btn btn-o btn-sm" style="flex:1;padding:6px;font-size:10px" onclick="setRate(22)">Базовая 22%</button>',
     '</div>',
     '<div class="c-res">',
